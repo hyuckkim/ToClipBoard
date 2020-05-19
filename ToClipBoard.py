@@ -10,7 +10,7 @@ datafile = open(path,'r')
 Data = datafile.readlines()
 cells = []
 for x in Data:
-    if x[-2] == '|':
+    if len(x) > 1 and x[-2] == '|':
         cells.append([x[:-2],''])
     else:
         cells[-1][1] += x
@@ -22,4 +22,5 @@ while(True):
     k = int(input('복사할 링크를 선택해 주세요.'))
     print(cells[k - 1][1])
     pyperclip.copy(cells[k - 1][1])
+    print('복사되었습니다.')
 
