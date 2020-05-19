@@ -1,0 +1,2 @@
+# ToClipBoard
+Paste to ClipBoard.
